@@ -3,37 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Node App</title>
+  <title>My Node App Dashboard</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f9;
+    /* General Reset */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      text-align: center;
       padding: 20px;
     }
-    h1 {
-      color: #333;
+
+    /* Header */
+    header {
+      background: #1e88e5;
+      color: #ffffff;
+      padding: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
     }
-    p {
-      color: #666;
+
+    header h1 {
+      font-size: 2.5rem;
     }
-    a {
-      color: #007BFF;
+
+    /* Container for Sections */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: #1e1e2f;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .card h2 {
+      color: #00d1ff;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b0b0b0;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      color: #00d1ff;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
+
+    .card a:hover {
       text-decoration: underline;
+    }
+
+    /* Code Styling */
+    code {
+      background-color: #333;
+      color: #00d1ff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Linux Section */
+    .linux-logo {
+      display: block;
+      margin: 20px auto;
+      width: 120px;
+      height: auto;
+    }
+
+    /* Programmers Section */
+    .programmers {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .programmers h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00d1ff;
+    }
+
+    .programmers-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Node App!</h1>
-  <p>This is the default interface for your application served by <code>http-server</code>.</p>
-  <p>Here are some useful links:</p>
-  <ul>
-    <li><a href="/app.js" target="_blank">View app.js</a></li>
-    <li><a href="/package.json" target="_blank">View package.json</a></li>
-  </ul>
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Node App Dashboard🐧</h1>
+    <p>Your modern Node.js application hub. </p>
+  </header>
+
+  <!-- Content Section -->
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <h2>Project Overview</h2>
+      <p>This application demonstrates a simple Node.js server setup using <code>http-server</code>.</p>
+      <a href="/readme" target="_blank">Learn More</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h2>Code Files</h2>
+      <p>Explore essential files required for running the application, including <code>app.js</code>.</p>
+      <a href="/app.js" target="_blank">View app.js</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h2>Configuration</h2>
+      <p>Review your project configuration details in the <code>package.json</code> file.</p>
+      <a href="/package.json" target="_blank">View package.json</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <h2>Node.js Tools</h2>
+      <p>Install global tools like <code>http-server</code> to serve your Node.js applications.</p>
+      <a href="https://www.npmjs.com/package/http-server" target="_blank">Visit npm</a>
+    </div>
+
+
+  <!-- Programmers Section -->
+  <section class="programmers">
+    <h2>Programming Legends</h2>
+    <div class="programmers-container">
+      <!-- Dennis Ritchie -->
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dennis_Ritchie_2011.jpg" alt="Dennis Ritchie - Father of C Language">
+        <h2>Dennis Ritchie</h2>
+        <p>Father of the C Programming Language and co-creator of UNIX.</p>
+      </div>
+      <!-- Guido van Rossum -->
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg" alt="Guido van Rossum - Creator of Python">
+        <h2>Guido van Rossum</h2>
+        <p>Creator of Python, driving its simplicity and power in software development.</p>
+      </div>
+      <!-- James Gosling -->
+      <div class="card">
+        <img src="https://media.gettyimages.com/id/88866557/photo/james-gosling-vice-president-and-sun-fellow-sun-microsystems-in-hyderabad-india.jpg?s=612x612&w=gi&k=20&c=389HkuZVqH3lX_XTjdoxPloHRuYPh9Zktgt59f18wGE=" alt="James Gosling - Father of Java">
+        <h2>James Gosling</h2>
+        <p>Known as the Father of Java, creator of its virtual machine and compiler.</p>
+      </div>
+      <!-- Ken Thompson -->
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ken_Thompson%2C_2019.jpg/220px-Ken_Thompson%2C_2019.jpg" alt="Ken Thompson - Co-creator of UNIX">
+        <h2>Ken Thompson</h2>
+        <p>Co-creator of UNIX and C, and inventor of the B programming language.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 My Node App. Designed with 💙 for developers.
+  </footer>
 </body>
 </html>
